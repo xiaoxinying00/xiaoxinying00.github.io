@@ -5,8 +5,95 @@
         <link>http://example.com</link>
         <description></description>
         <language>en</language>
-        <pubDate>Sat, 06 May 2023 16:08:17 +0800</pubDate>
-        <lastBuildDate>Sat, 06 May 2023 16:08:17 +0800</lastBuildDate>
+        <pubDate>Sat, 06 May 2023 19:33:47 +0800</pubDate>
+        <lastBuildDate>Sat, 06 May 2023 19:33:47 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">http://example.com/2023/05/06/git/</guid>
+            <title></title>
+            <link>http://example.com/2023/05/06/git/</link>
+            <pubDate>Sat, 06 May 2023 19:33:47 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;一-学习git的意义&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-学习git的意义&#34;&gt;#&lt;/a&gt; 一、学习 git 的意义&lt;/h3&gt;
+&lt;h4 id=&#34;1-在协同工作可能会出现的问题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1-在协同工作可能会出现的问题&#34;&gt;#&lt;/a&gt; 1、在协同工作可能会出现的问题&lt;/h4&gt;
+&lt;p&gt;我们在工作的时候肯需要多人协作完成同一个项目，在这个时候可能会出现以下问题&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;文件版本混乱&lt;/li&gt;
+&lt;li&gt;无法同时完成分别的任务&lt;/li&gt;
+&lt;li&gt;项目一旦出问题，回退复杂&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这个时候版本控制软件就很有用了！！！&lt;/p&gt;
+&lt;h4 id=&#34;2-版本控制软件的类别&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2-版本控制软件的类别&#34;&gt;#&lt;/a&gt; 2、版本控制软件的类别&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;集中式版本控制软件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;​	缺点：&lt;/p&gt;
+&lt;p&gt;​			(1) 一旦&lt;strong&gt;服务器出现问题大崩盘&lt;/strong&gt;，所有成员都无法接收或提交文件&lt;/p&gt;
+&lt;p&gt;​			(2) &lt;strong&gt;多人协作&lt;/strong&gt;会&lt;strong&gt;出现版本混乱&lt;/strong&gt;的问题&lt;/p&gt;
+&lt;p&gt;​			(3) svn 虽然后期利用锁定解决了多个用户修改文件出现的版本问题，但是&lt;strong&gt;不能同时工作&lt;/strong&gt;，每次只能有一人在线修改&lt;/p&gt;
+&lt;p&gt;​			(4) 用户每次都需要将文件上传到中央服务器，一旦网络比较差 / 文件很大，&lt;strong&gt;耗费时间多，对网络依赖性强&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;D:%5C%E6%A1%8C%E9%9D%A2%5C%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%5Cgit%E5%AD%A6%E4%B9%A0%5Cimage-20230505153035719.png&#34; alt=&#34;image-20230505153035719&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;分布式版本控制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;​	特点：每一名开发者的电脑上都会有一个完整的版本库，这样你就不用在开发工作时不需要联网（因为版本库就在个人开发者的电脑上）, 那么既然每个人都有完整的版本库。&lt;/p&gt;
+&lt;p&gt;​	工作流程：&lt;/p&gt;
+&lt;p&gt;​			(1) 开发者先将远程服务器的完整的版本库&lt;strong&gt;拷贝到本地&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​			(2) 开发者在&lt;strong&gt;本地修改&lt;/strong&gt;对应的功能模块 - (本地仓库会自动生成版本文件信息)&lt;/p&gt;
+&lt;p&gt;​			(3) 如果有人修改文件，可以&lt;strong&gt;更新文件&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​			(4) 提交前&lt;strong&gt;查看修改内容&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​			(5) 将本地库的对应版本文件&lt;strong&gt;推送到远程服务器&lt;/strong&gt;中 - (服务器此时会比对本地库的文件和服务器文件区别，在生成版本信息)&lt;/p&gt;
+&lt;p&gt;​			(6) 若发现错误，撤回推送，&lt;strong&gt;重新提交&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://edu.aliyun.com/files/course/2017/09-25/174429daa761260095.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;​	相比集中式版本控制的优点：&lt;/p&gt;
+&lt;p&gt;​			(1) &lt;strong&gt;安全性高&lt;/strong&gt; - (一旦一个人电脑坏了，还可以去另一个人那里复制，文件不会丢失)&lt;/p&gt;
+&lt;p&gt;​			(2) &lt;strong&gt;减少了版本冲突&lt;/strong&gt;，虽然也会有版本冲突的问题，但是减少了版本冲突，不会用户每一个修改文件都会引起大冲突，在将最终文件推送到服务器时需要解决&lt;/p&gt;
+&lt;p&gt;​			(3) &lt;strong&gt;对网络依赖性减弱&lt;/strong&gt;，即使服务器出现问题，用户还可以在本地仓库中修改文件&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;总结，版本控制就是用于管理多人协同开发项目的技术。&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;3-git是啥image-20230505153304991&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3-git是啥image-20230505153304991&#34;&gt;#&lt;/a&gt; 3、git 是啥？&lt;img data-src=&#34;D:%5C%E6%A1%8C%E9%9D%A2%5C%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%5Cgit%E5%AD%A6%E4%B9%A0%5Cimage-20230505153304991.png&#34; alt=&#34;image-20230505153304991&#34;&gt;&lt;/h4&gt;
+&lt;p&gt;​	&lt;strong&gt;git 是一个免费开源、高效快速的分布式版本控制软件&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;4-git的特点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4-git的特点&#34;&gt;#&lt;/a&gt; 4、git 的特点&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;并非基于差异对比变更内容，而是直接记录版本信息&lt;/li&gt;
+&lt;li&gt;几乎所有操作都是基于本地执行&lt;/li&gt;
+&lt;li&gt;git 能保证文件传输的完整性 - 底层：Git 中所有的数据在存储前都计算校验和，然后以校验和来引用。&lt;/li&gt;
+&lt;li&gt;有极强的分支管理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;二-git-工作区-暂存区和版本库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-git-工作区-暂存区和版本库&#34;&gt;#&lt;/a&gt; 二、Git 工作区、暂存区和版本库&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;** 工作区：** 就是你在电脑里能看到的目录。&lt;/li&gt;
+&lt;li&gt;** 暂存区：** 英文叫 stage, 或 index。一般存放在 “.git 目录下” 下的 index 文件（.git/index）中，所以我们把暂存区有时也叫作索引（index）。&lt;/li&gt;
+&lt;li&gt;** 版本库：** 工作区有一个隐藏目录.git，这个不算工作区，而是 Git 的版本库。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;三-git的基础操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三-git的基础操作&#34;&gt;#&lt;/a&gt; 三、git 的基础操作&lt;/h3&gt;
+&lt;h4 id=&#34;1-仓库管理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1-仓库管理&#34;&gt;#&lt;/a&gt; 1、仓库管理&lt;/h4&gt;
+&lt;h5 id=&#34;1获取仓库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1获取仓库&#34;&gt;#&lt;/a&gt; （1）获取仓库&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;本地目录转换成 git 仓库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;跳到对应目录&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ cd d/xx&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;初始化仓库&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ git init&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;从其他服务器克隆到一个已存在的 git 仓库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ git clone htpps://XXXXXX &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h5 id=&#34;2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2&#34;&gt;#&lt;/a&gt; （2）&lt;/h5&gt;
+&lt;h4 id=&#34;2-文件管理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2-文件管理&#34;&gt;#&lt;/a&gt; 2、文件管理&lt;/h4&gt;
+&lt;h5 id=&#34;1文件的四种状态&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1文件的四种状态&#34;&gt;#&lt;/a&gt; （1）文件的四种状态&lt;/h5&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://git-scm.com/book/en/v2/images/lifecycle.png&#34; alt=&#34;Git 下文件生命周期图。&#34;&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight c&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ git status -- 查看文件状态&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//结果&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;On branch master -- 所在的目录&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;No commits yet -- 已经提交的内容&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Changes to be committed: -- 要提交的更改&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  (use &lt;span class=&#34;string&#34;&gt;&amp;quot;git rm --cached &amp;lt;file&amp;gt;...&amp;quot;&lt;/span&gt; to unstage)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        new file:   README&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        new file:   myNote&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Changes not staged &lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt; commit: -- 未暂存提交的更改&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  (use &lt;span class=&#34;string&#34;&gt;&amp;quot;git add/rm &amp;lt;file&amp;gt;...&amp;quot;&lt;/span&gt; to update what will be committed)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  (use &lt;span class=&#34;string&#34;&gt;&amp;quot;git restore &amp;lt;file&amp;gt;...&amp;quot;&lt;/span&gt; to discard changes in working directory)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  (commit or discard the untracked or modified content in submodules)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        deleted:    README&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        modified:   myNote (untracked content)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Untracked files: -- 追踪的文件&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  (use &lt;span class=&#34;string&#34;&gt;&amp;quot;git add &amp;lt;file&amp;gt;...&amp;quot;&lt;/span&gt; to include in what will be committed)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        README.md&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight c&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ git status -s -- 简看文件状态 左侧是暂存区的状态|右侧是工作区的状态&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;AD xxx -- 添加到暂存区 且删除的文件&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;A? xxx -- 添加到暂存区 工作区中修改&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;?? README.md -- 新添加的的未追踪文件&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;MM xxx -- 暂存区修改 工作区中修改&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h5 id=&#34;2忽略文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2忽略文件&#34;&gt;#&lt;/a&gt; （2）忽略文件&lt;/h5&gt;
+&lt;figure class=&#34;highlight console&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta prompt_&#34;&gt;$ &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cat&lt;/span&gt; .gitignore&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;*.[oa] - 忽略以o|a结尾的文件&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;*~ - 忽略~结尾的文件&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;3-分支管理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3-分支管理&#34;&gt;#&lt;/a&gt; 3、分支管理&lt;/h4&gt;
+&lt;h4 id=&#34;4-标签管理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4-标签管理&#34;&gt;#&lt;/a&gt; 4、标签管理&lt;/h4&gt;
+&lt;h4 id=&#34;5-远程操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5-远程操作&#34;&gt;#&lt;/a&gt; 5、远程操作&lt;/h4&gt;
+&lt;h4 id=&#34;6-常用命令表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#6-常用命令表&#34;&gt;#&lt;/a&gt; 6、常用命令表&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://www.runoob.com/wp-content/uploads/2015/02/011500266295799.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;三-进阶&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三-进阶&#34;&gt;#&lt;/a&gt; 三、进阶&lt;/h3&gt;
+&lt;h6 id=&#34;使用开发者工具集成git访问githubgitee&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用开发者工具集成git访问githubgitee&#34;&gt;#&lt;/a&gt; 使用开发者工具集成 git 访问 GitHub||Gitee&lt;/h6&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://example.com/2023/05/06/postName/</guid>
             <title>postName</title>
